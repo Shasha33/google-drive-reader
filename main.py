@@ -2,7 +2,9 @@
 
 import http.client
 
-c = http.client.HTTPSConnection("google.com")
-c.request("GET", "/")
+c = http.client.HTTPSConnection("www.googleapis.com")
+
+headers = {"key": "password_key"}
+c.request("POST", "/auth/documents.readonly", "", headers)
 response = c.getresponse()
 print(response.status, response.reason)

@@ -2,9 +2,10 @@
 
 import http.client
 import urllib.parse
+import json
 
 params = urllib.parse.urlencode(
-    {'@client_id': '480236582879-8h0b7vfns2lmou9ot9f3b3ivl2a72eg1.apps.googleusercontent>', '@response_typ': 'code', '@scope': 'https://www.googleapis.com/auth/drive.metadata.readonly', '@redirect_url': 'urn:ietf:wg:oauth:2.0:oob' }
+    {'@client_id': '480236582879-8h0b7vfns2lmou9ot9f3b3ivl2a72eg1.apps.googleusercontent>', '@response_typ': 'code', '@scope': 'https://www.googleapis.com/auth/drive.readonly', '@redirect_url': 'urn:ietf:wg:oauth:2.0:oob' }
 )
 
 
@@ -14,4 +15,4 @@ headers = {"Authorization: Basic YWxhZGRpbjpvcGVuc2VzYW1l": "Basic YWxhZGRpbjpvc
 c.request("POST", "/o/oauth2/v2/auth", params, {})
 response = c.getresponse()
 print(response.status, response.reason)
-print(response)
+print(response.read().decode())

@@ -4,7 +4,7 @@ import http.client
 import urllib.parse
 
 params = urllib.parse.urlencode(
-    {'@client_id': '480236582879-8h0b7vfns2lmou9ot9f3b3ivl2a72eg1.apps.googleusercontent>', '@response_typ': 'code', '@scope': 'https://www.googleapis.com/auth/drive.metadata.readonly', '@redirect_ur': 'urn:ietf:wg:oauth:2.0:oob' }
+    {'@client_id': '480236582879-8h0b7vfns2lmou9ot9f3b3ivl2a72eg1.apps.googleusercontent>', '@response_typ': 'code', '@scope': 'https://www.googleapis.com/auth/drive.metadata.readonly', '@redirect_url': 'urn:ietf:wg:oauth:2.0:oob' }
 )
 
 
